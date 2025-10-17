@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Conversor-moedas</title>
+</head>
+
+<body>
+
+    <section class="container">
+        <h1>Conversor de moedas</h1>
+
+        <form class="convert-form" id="convertForm">
+            <div class="currency-row">
+                <div class="currency-input">
+                    <label for="amount">Valor:</label>
+                    <input type="number" id="amount" placeholder="Digite o valor" step="0.1" min="0" required>
+
+                </div>
+
+                <div class="currency-select">
+                    <label for="fromCurrency">De:</label>
+                    <select name="fromCurrency" id="fromCurrency" required>
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="JPY">Iene Japonês (JPY)</option>
+                        <option value="BRL" selected>Real Brasileiro (BRL)</option>
+                        <option value="ARS">Peso Argentino (ARS)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="CHF">Franco Suizo (CHF)</option>
+                        <option value="CNY">Yuan Chinês (CNY)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="currency-row">
+                <div class="currency-input">
+                    <label for="amount">Resultado:</label>
+                    <input type="text" readonly id="convertedAmount" placeholder="Valor convertido">
+
+                </div>
+
+                <div class="currency-select">
+                    <label for="toCurrency">Para:</label>
+                    <select name="toCurrency" id="toCurrency" required>
+                        <option value="USD" selected>Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="JPY">Iene Japonês (JPY)</option>
+                        <option value="BRL">Real Brasileiro (BRL)</option>
+                        <option value="ARS">Peso Argentino (ARS)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="CHF">Franco Suizo (CHF)</option>
+                        <option value="CNY">Yuan Chinês (CNY)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="converter-btn" id="converterBtn">💰Converter </button>
+            
+
+        </form>
+
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Buscando Cotação...</p>
+        </div>
+
+        <div class="result"></div>
+        <div class="error"></div>
+
+        <div class="info">
+            <p>✅Taxas atualizadas em tempo real</p>
+        </div>
+        <footer class="footer">
+            <p>Desenvolvido por <a href="https://github.com/Kaelton1280" target="_blank">Kaelton-Dev</a></p>
+        </footer>
+    </section>
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>
