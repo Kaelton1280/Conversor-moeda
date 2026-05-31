@@ -13,6 +13,8 @@ body {
     align-items: center;
     padding: 20px;
     font-family: "Montserrat", sans-serif;
+    scrollbar-width: none; /* Esconde a barra de rolagem */
+    
 }
 
 .container {
